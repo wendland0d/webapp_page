@@ -13,15 +13,7 @@
 <script type="text/javascript">
     window.Telegram.WebApp.expand();
 
-    window.Telegram.WebApp.showPopup({
-                title: "Заголовок",
-                message: "Текст сообщения",
-                buttons: [
-                            { type: "close", text: "close" },
-                            { type: "destructive", text: "delete" },
-                            { type: "ok", text: "ok" }
-                         ]
-             });
+    window.Telegram.WebApp.enableClosingConfirmation();
 </script>
 <div class="chat-list-header">
     <span>Выберите чат</span>
