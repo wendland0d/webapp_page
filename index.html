@@ -1,33 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <style>
-
-    </style>
+    <title>web-app</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <header>
-        Mr FLIP TG WEB APP
-    </header>
-    <script type="text/javascript">
-        window.Telegram.WebApp.expand()
-    </script>
-    <button>
-        <a href="site_chat/index.html">
-            CHAT
-        </a>
-    </button>
-    <button>
-        <a href="site_object/index.html">
-            Object
-        </a>
-    </button>
+<div class="chat-list-header">
+    <span>Выберите чат</span>
+</div>
+<div class="chat-list">
+    <a class="chat-list-item" href="site_chat/index.html">
+        <div class="avatar">
+            <img src="home-icon.png" alt="">
+        </div>
+        <span class="name">Тюменский проезд 3к1</span>
+    </a>
+    <a class="chat-list-item new-messages" href="site_chat/index.html">
+        <div class="avatar">
+            <img src="home-icon.png" alt="">
+        </div>
+        <span class="name">Тюменский проезд 3к1</span>
+    </a>
+</div>
 </body>
 </html>

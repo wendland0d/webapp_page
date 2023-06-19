@@ -6,15 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>web-app</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="chat-content">
     <div class="chat-header">
-        <img src="home-icon.png" alt="">
+        <img src="../home-icon.png" alt="">
         Тюменский проезд 3к1
-        <img src="home-icon.png" alt="">
+        <img src="../home-icon.png" alt="">
     </div>
-    <div class="chat-body">
+    <div class="chat-body" id="chatBody">
         <div class="chat-body-item right">
             <span class="chat-body-item-text">
                 Привет, пишу по квартире Тюменский проезд 3к1
@@ -127,8 +127,13 @@
     <div class="chat-footer">
         <input type="text">
         <button>
-            <img src="send-button.svg" alt="">
+            <img src="../send-button.svg" alt="">
         </button>
     </div>
+
+    <script>
+        let chatBody = document.getElementById("chatBody");
+        chatBody.scrollTop = chatBody.scrollHeight;
+    </script>
 </body>
 </html>
