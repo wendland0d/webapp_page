@@ -7,6 +7,7 @@ body{
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     overflow-y: hidden;
+    background-color: #fff;
 }
 .chat-header{
     height: 10vh;
@@ -17,8 +18,12 @@ body{
     box-sizing: border-box;
     background-color: #fff;
 }
-.chat-header > img{
+.chat-header-name > img{
     width: 20px;
+}
+.chat-header-back{
+    text-decoration: none;
+    color: #006BDF;
 }
 .chat-body{
     display: flex;
@@ -105,6 +110,9 @@ li{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #fff;
+}
+.chat-list{
     background-color: #fff;
 }
 .avatar{
