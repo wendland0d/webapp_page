@@ -12,10 +12,16 @@
 <body>
 <script type="text/javascript">
     window.Telegram.WebApp.expand();
-    let mainButton = window.Telegram.WebApp.MainButton();
-    mainButton.enable();
-    mainButton.show();
-    mainButton.text = "Privet";
+    let tg = window.Telegram.WebApp;
+    tg.MainButton.text = "Наши контакты";
+    tg.MainButton.isVisible = true;
+    tg.MainButton.show();
+    Telegram.WebApp.onEvent('mainButtonClicked', function (){
+        tg.showPopup({
+            title: "privet"
+        });
+    });
+
     window.Telegram.WebApp.enableClosingConfirmation();
 </script>
 <div class="chat-list-header">
