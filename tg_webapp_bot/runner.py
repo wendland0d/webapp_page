@@ -1,12 +1,15 @@
 from tg_webapp_bot import bot, executor, dp
-from aiogram.types import Message
+from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 from aiogram.types import WebAppInfo
 import asyncio
 
 
 @dp.message_handler(commands='start')
 async def start(message: Message):
-    await message.reply(f"Hi {message.from_user.username}!")
+    keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
+    keyboard.add(KeyboardButton(text='Web App', web_app=WebAppInfo(url="https://wendland0d.github.io/webapp_page/")))
+    await message.reply(f"Hi {message.from_user.username}!", reply_markup=keyboard)
+
 
 
 async def main():
