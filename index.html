@@ -13,7 +13,7 @@
 <script type="text/javascript">
     window.Telegram.WebApp.expand();
     let tg = window.Telegram.WebApp;
-    tg.MainButton.text = "Наши контакты";
+    tg.MainButton.text = "Предложить объект";
     tg.MainButton.isVisible = true;
     tg.MainButton.show();
     tg.MainButton.onClick(() => {
@@ -21,12 +21,12 @@
         document.getElementById("chat").style.display = "none";
         document.getElementById("suggest_property").style.display = "block";
         tg.BackButton.isVisible = true;
-        tg.MainButton.isVisible = false;
+        tg.MainButton.text = "Отправить предложение";
         tg.BackButton.onClick(() => {
             document.getElementById("chat").style.display = "block";
             document.getElementById("suggest_property").style.display = "none";
             tg.BackButton.isVisible = false;
-            tg.MainButton.isVisible = true;
+            tg.MainButton.isVisible = "Предложить объект";
         });
     });
     tg.MainButton.enable();
@@ -55,8 +55,10 @@
 </div>
 
 <div id="suggest_property" style="display: none">
-Саня - отец фронта
-
+    ФИО
+    <textarea placeholder="Введите ФИО"></textarea>
+    CСЫЛКА НА ОБЪЕКТ
+    <textarea placeholder="Ссылка на объект"></textarea>
 </div>
 </body>
 </html>
