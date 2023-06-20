@@ -14,7 +14,7 @@
         window.Telegram.WebApp.enableClosingConfirmation();
         let tg = window.Telegram.WebApp;
         tg.BackButton.isVisible = true;
-        tg.MainButton.text = "Введите сообщение"
+
         tg.MainButton.isVisible = true;
 
 
@@ -24,9 +24,11 @@
 
         if (inputValue === ""){
             tg.MainButton.disable();
+            tg.MainButton.text = "Введите сообщение";
             tg.MainButton.color = "#e3e3e3";
         } else {
             tg.MainButton.enable();
+            tg.MainButton.text = "Отправить сообщение";
             tg.MainButton.color = "#006BDF";
         }
 
