@@ -17,29 +17,37 @@
     tg.MainButton.isVisible = true;
     tg.MainButton.show();
     tg.MainButton.onClick(() => {
-        tg.openInvoice("https://google.com");
+        document.getElementById("chat").style.display = "none";
+        document.getElementById("suggest_property").style.display = "block";
     });
     tg.MainButton.enable();
     tg.ready();
 
     window.Telegram.WebApp.enableClosingConfirmation();
 </script>
-<div class="chat-list-header">
-    <span>Выберите чат</span>
+<div id="chat" style="display: block">
+    <div class="chat-list-header">
+        <span>Выберите чат</span>
+    </div>
+    <div class="chat-list">
+        <a class="chat-list-item" href="site_chat/index.html">
+            <div class="avatar">
+                <img src="img/home-icon.png" alt="">
+            </div>
+            <span class="name">Тюменский проезд 3к1</span>
+        </a>
+        <a class="chat-list-item new-messages" href="site_chat/index.html">
+            <div class="avatar">
+                <img src="img/home-icon.png" alt="">
+            </div>
+            <span class="name">Тюменский проезд 3к1</span>
+        </a>
+    </div>
 </div>
-<div class="chat-list">
-    <a class="chat-list-item" href="site_chat/index.html">
-        <div class="avatar">
-            <img src="img/home-icon.png" alt="">
-        </div>
-        <span class="name">Тюменский проезд 3к1</span>
-    </a>
-    <a class="chat-list-item new-messages" href="site_chat/index.html">
-        <div class="avatar">
-            <img src="img/home-icon.png" alt="">
-        </div>
-        <span class="name">Тюменский проезд 3к1</span>
-    </a>
+
+<div id="suggest_property" style="display: none">
+Саня - отец фронта
+
 </div>
 </body>
 </html>
