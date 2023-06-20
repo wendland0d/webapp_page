@@ -25,7 +25,7 @@
         });
 
         const input = document.querySelector("input");
-        input.addEventListener("input", () => {
+        input.addEventListener("onchange", (event) => {
             tg.MainButton.enable();
             tg.MainButton.text = "Отправить сообщение";
             tg.MainButton.color = "#006BDF";
