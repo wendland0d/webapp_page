@@ -16,29 +16,26 @@
         tg.BackButton.isVisible = true;
 
         tg.MainButton.isVisible = true;
-
-
-
-        const inputElement = document.getElementById("chat-input-field");
-        const inputValue = inputElement.value;
-
-        if (inputValue === ""){
-            tg.MainButton.disable();
-            tg.MainButton.text = "Введите сообщение";
-            tg.MainButton.color = "#e3e3e3";
-        } else {
-            tg.MainButton.enable();
-            tg.MainButton.text = "Отправить сообщение";
-            tg.MainButton.color = "#006BDF";
-        }
-
-
-
-
+        tg.MainButton.disable();
+        tg.MainButton.text = "Введите сообщение";
+        tg.MainButton.color = "#e3e3e3";
         tg.BackButton.onClick(() => {
             document.location = "../index.html"
             tg.BackButton.isVisible = false;
         });
+
+        const input = document.querySelector("input");
+        input.addEventListener("input", () => {
+            tg.MainButton.enable();
+            tg.MainButton.text = "Отправить сообщение";
+            tg.MainButton.color = "#006BDF";
+        });
+
+
+
+
+
+
 
 </script>
     <div class="chat-header">
