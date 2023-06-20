@@ -17,8 +17,15 @@
     tg.MainButton.isVisible = true;
     tg.MainButton.show();
     tg.MainButton.onClick(() => {
+
         document.getElementById("chat").style.display = "none";
         document.getElementById("suggest_property").style.display = "block";
+        tg.BackButton.isVisible = true;
+        tg.BackButton.onClick(() => {
+            document.getElementById("chat").style.display = "block";
+            document.getElementById("suggest_property").style.display = "none";
+            tg.BackButton.isVisible = false;
+        });
     });
     tg.MainButton.enable();
     tg.ready();
