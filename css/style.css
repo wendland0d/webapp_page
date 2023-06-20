@@ -153,3 +153,6 @@ li{
 div#suggest_property{
     background-color: #fff;
 }
+div#suggest_property > textarea{
+    width: 100%;
+}
