@@ -14,8 +14,29 @@
         window.Telegram.WebApp.enableClosingConfirmation();
         let tg = window.Telegram.WebApp;
         tg.BackButton.isVisible = true;
+        tg.MainButton.text = 'Введите сообщение'
+        tg.MainButton.isVisible = true;
+        tg.MainButton.disable();
+        tg.MainButton.color = "#e3e3e3"
+
+        if (document.getElementById("chat-input-field") != null) {
+            tg.MainButton.text = "Отправить сообщение"
+            tg.MainButton.color = "#a0e7ff"
+            tg.MainButton.enable();
+            tg.MainButton.onClick(() => {
+                tg.showPopup({
+                    "title": "404",
+                    "message": "Скоро мы доделаем....",
+                    "buttons": {
+                        "type": "close",
+                        "text": "Закрыть"
+                    }
+                })
+            })
+        }
         tg.BackButton.onClick(() => {
             document.location = "../index.html"
+            tg.BackButton.isVisible = false;
         });
 
 </script>
@@ -140,10 +161,7 @@
         </div>
     </div>
     <div class="chat-footer">
-        <input type="text">
-        <button>
-            <img src="../img/send-button.svg" alt="">
-        </button>
+        <input id="chat-input-field" type="text">
     </div>
 
     <script>
