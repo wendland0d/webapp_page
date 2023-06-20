@@ -18,9 +18,12 @@
         tg.MainButton.isVisible = true;
         tg.MainButton.disable();
         tg.MainButton.color = "#e3e3e3";
-        oninput(() => {
+        if (document.getElementById("chat-input-field").value != null) {
             tg.MainButton.enable();
             tg.MainButton.color = "#006BDF";
+        }
+        oninput(() => {
+            console.log("test")
         });
 
         tg.BackButton.onClick(() => {
