@@ -16,10 +16,8 @@
     tg.MainButton.text = "Наши контакты";
     tg.MainButton.isVisible = true;
     tg.MainButton.show();
-    tg.MainButton.onClick(function (){
-        tg.showPopup({
-            title: "privet"
-        });
+    tg.MainButton.onClick(() => {
+        alert("Privet")
     });
     tg.MainButton.enable();
     tg.ready();
