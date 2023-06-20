@@ -16,7 +16,7 @@
     tg.MainButton.text = "Наши контакты";
     tg.MainButton.isVisible = true;
     tg.MainButton.show();
-    Telegram.WebApp.onEvent('mainButtonClicked', function (){
+    tg.MainButton.onClick(function (){
         tg.showPopup({
             title: "privet"
         });
