@@ -16,14 +16,21 @@
         tg.BackButton.isVisible = true;
         tg.MainButton.text = "Введите сообщение"
         tg.MainButton.isVisible = true;
-        tg.MainButton.disable();
-        tg.MainButton.color = "#e3e3e3";
 
-        let chat_input = document.getElementById('chat-input-field')
-        chat_input.oninput = () => {
+
+
+        const inputElement = document.getElementById("chat-input-field");
+        const inputValue = inputElement.value;
+
+        if (inputValue === ""){
+            tg.MainButton.disable();
+            tg.MainButton.color = "#e3e3e3";
+        } else {
             tg.MainButton.enable();
             tg.MainButton.color = "#006BDF";
-        };
+        }
+
+
 
 
         tg.BackButton.onClick(() => {
