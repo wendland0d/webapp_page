@@ -18,13 +18,13 @@
         tg.MainButton.isVisible = true;
         tg.MainButton.disable();
         tg.MainButton.color = "#e3e3e3";
-        if (document.getElementById("chat-input-field").value != null) {
+
+        let chat_input = document.getElementById('chat-input-field')
+        chat_input.oninput = () => {
             tg.MainButton.enable();
             tg.MainButton.color = "#006BDF";
-        }
-        oninput(() => {
-            console.log("test")
-        });
+        };
+
 
         tg.BackButton.onClick(() => {
             document.location = "../index.html"
