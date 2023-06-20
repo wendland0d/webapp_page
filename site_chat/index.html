@@ -19,7 +19,7 @@
         tg.MainButton.disable();
         tg.MainButton.color = "#e3e3e3"
         const selectInput = document.getElementById("chat-input-field");
-        oninput = () => {
+        selectInput("oninput", () => {
             tg.MainButton.text = "Отправить сообщение"
             tg.MainButton.color = "#a0e7ff"
             tg.MainButton.enable();
@@ -33,6 +33,7 @@
                     }
                 });
             });
+        });
         tg.BackButton.onClick(() => {
             document.location = "../index.html"
             tg.BackButton.isVisible = false;
