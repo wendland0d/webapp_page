@@ -19,7 +19,7 @@
         tg.MainButton.disable();
         tg.MainButton.color = "#e3e3e3"
         const selectInput = document.getElementById("chat-input-field");
-        selectInput("oninput", () => {
+        selectInput.addEventListener("oninput", () => {
             tg.MainButton.text = "Отправить сообщение"
             tg.MainButton.color = "#a0e7ff"
             tg.MainButton.enable();
