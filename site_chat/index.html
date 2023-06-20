@@ -14,10 +14,13 @@
         window.Telegram.WebApp.enableClosingConfirmation();
         let tg = window.Telegram.WebApp;
         tg.BackButton.isVisible = true;
-        tg.MainButton.text = 'Введите сообщение'
+        tg.MainButton.text = "Введите сообщение"
         tg.MainButton.isVisible = true;
         tg.MainButton.disable();
-        tg.MainButton.color = "#e3e3e3"
+        tg.MainButton.color = "#e3e3e3";
+        oninput(() => {
+            tg.MainButton.enable();
+        });
 
         tg.BackButton.onClick(() => {
             document.location = "../index.html"
